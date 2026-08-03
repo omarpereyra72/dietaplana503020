@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dieta Plana 503020 - Vida y Esperanza</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/auth.js"></script>
+</head>
+<body>
+
+  <!-- Sección de Login -->
+  <div id="login-section" class="login-wrapper">
+    <div class="login-box">
+      <h2>🥬 Acceso al Portal</h2>
+      <p style="color:#666; font-size:0.95rem;">Ingresa tus credenciales para acceder a la Dieta Plana 503020</p>
+      <form onsubmit="login(event)">
+        <div class="form-group">
+          <label for="username">Usuario 👤</label>
+          <input type="text" id="username" required placeholder="admin" autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña 🔑</label>
+          <input type="password" id="password" required placeholder="••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn-login">Ingresar al Portal 🥑</button>
+        <div id="error-msg" class="error-msg">⚠️ Usuario o contraseña incorrectos. (admin / ies21)</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <div id="dashboard-section" style="display: none;">
+    <header>
+      <h1>🥗 Dieta Plana 503020 - Salud, Vida & Esperanza</h1>
+      <p>Modelo Nutritivo y Nutrigenético de Renaturalización Orgánica</p>
+    </header>
+
+    <nav>
+      <a href="index.html" class="active">🏠 Inicio</a>
+      <a href="textos/fundamentos.html">🧬 Fundamentos</a>
+      <a href="textos/grupos.html">🥦 Grupos (50/30/20)</a>
+      <a href="recetas/menu_recetas.html">🍲 Menús y Recetas</a>
+      <a href="bibliografia/fuentes.html">📖 Bibliografía</a>
+      <button onclick="logout()" class="btn-logout">Cerrar Sesión 🔓</button>
+    </nav>
+
+    <div class="container">
+      <div class="card card-verde">
+        <h2>🌱 Bienvenida e Introducción</h2>
+        <p>La <strong>Dieta Plana 503020</strong> es un modelo de alimentación saludable y de renaturalización orgánica desarrollado por el investigador peruano <strong>Nimer Simeón</strong>. Se fundamenta en los descubrimientos de la <em>nutrigenética</em>, la bioquímica celular y el equilibrio fisiológico natural del organismo.</p>
+        <p>Este sistema propone una distribución armónica de los alimentos en el plato diario para garantizar la óptima asimilación de nutrientes, prevenir la sobre-fermentación gastrointestinal y promover la regeneración del ADN celular.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-naranja">
+          <h2>📊 La Regla del Plato 50 / 30 / 20</h2>
+          <ul>
+            <li><span class="badge badge-verde">50%</span> <strong>Fosfatos (Verduras, Hortalizas y Frutas) 🥗:</strong> Aportan alcalinidad, enzimas, minerales y antioxidantes. Deben integrarse al menos <strong>4 colores</strong> vivos en cada comida principal.</li>
+            <li><span class="badge badge-naranja">30%</span> <strong>Azúcares Saludables (Tubérculos y Cereales Integrales) 🥔🌾:</strong> Carbohidratos complejos que entregan energía sostenida de liberación lenta.</li>
+            <li><span class="badge badge-rojo">20%</span> <strong>Nitrógenos (Proteínas Vegetales / Transición) 🫘🍗:</strong> Legumbres, oleaginosas, y proteínas magras de transición sin combinaciones pesadas.</li>
+          </ul>
+        </div>
+
+        <div class="card card-morado">
+          <h2>✨ Principios de Salud y Esperanza</h2>
+          <p>La Dieta Plana 503020 no es solo un plan nutricional, sino una filosofía de bienestar integral que cuida el cuerpo, la mente y el espíritu.</p>
+          <p>Las Sagradas Escrituras enseñan la estrecha relación entre la alimentación y el diseño original de la creación. En 
+            <a class="bible-link" href="https://www.biblegateway.com/passage/?search=G%C3%A9nesis+1%3A29&version=RVR1960" target="_blank" rel="noopener">Génesis 1:29 📖</a> 
+            se nos recuerda el alimento provisto en el principio: <em>"He aquí que os he dado toda planta que da semilla... os serán para comer"</em>.
+          </p>
+          <p>Asimismo, en 
+            <a class="bible-link" href="https://www.biblegateway.com/passage/?search=1+Corintios+10%3A23&version=RVR1960" target="_blank" rel="noopener">1 Corintios 10:23 📖</a> 
+            se nos motiva al dominio propio y la templanza en nuestras elecciones cotidianas.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-rojo">
+        <h2>🌈 Los 4 Colores Fundamentales de los Vegetales</h2>
+        <p>Para asegurar una sinergia biológica perfecta, cada plato principal debe incluir la variedad cromática de las hortalizas:</p>
+        <div class="grid-2" style="margin-top:15px;">
+          <div>
+            <p><span class="badge badge-verde">Verde 🥬</span> Lechuga, acelga, espinaca, apio, brócoli, pepino y espárragos. (Ricos en clorofila y magnesio).</p>
+            <p><span class="badge badge-rojo">Rojo 🍅</span> Tomate, pimiento rojo, rábano. (Ricos en licopeno y antioxidantes de regeneración).</p>
+          </div>
+          <div>
+            <p><span class="badge badge-naranja">Naranja / Amarillo 🥕</span> Zanahoria, calabaza, zapallo, choclo. (Ricos en betacarotenos y provitamina A).</p>
+            <p><span class="badge badge-morado">Morado 🍆</span> Berenjena, remolacha, col morada, aceitunas. (Ricos en antocianinas y protectores celulares).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>🥗 Dieta Plana 503020 — Proyecto de Nutrición, Nutrigenética y Bienestar. Diseñado para GitHub & Vercel.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

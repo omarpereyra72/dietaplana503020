@@ -1,0 +1,270 @@
+/* CSS - Dieta Plana 503020 */
+:root {
+  --verde-hoja: #2e7d32;
+  --verde-suave: #e8f5e9;
+  --rojo-tomate: #c62828;
+  --rojo-suave: #ffebee;
+  --naranja-zanahoria: #e65100;
+  --naranja-suave: #fff3e0;
+  --morado-berenjena: #6a1b9a;
+  --morado-suave: #f3e5f5;
+  --texto-principal: #1b262c;
+  --fondo-pagina: #f4f8f4;
+  --blanco: #ffffff;
+  --borde-suave: #dbe7db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: var(--fondo-pagina);
+  color: var(--texto-principal);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* Header & Banner */
+header {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32, #43a047);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--verde-suave);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #c8e6c9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--verde-hoja);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--verde-hoja);
+  color: var(--blanco);
+  box-shadow: 0 2px 6px rgba(46,125,50,0.3);
+}
+
+/* Main Layout */
+.container {
+  max-width: 1050px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Cards & Sections */
+.card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border: 1px solid var(--borde-suave);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-verde { border-top: 6px solid var(--verde-hoja); }
+.card-rojo { border-top: 6px solid var(--rojo-tomate); }
+.card-naranja { border-top: 6px solid var(--naranja-zanahoria); }
+.card-morado { border-top: 6px solid var(--morado-berenjena); }
+
+h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-verde h2 { color: var(--verde-hoja); }
+.card-rojo h2 { color: var(--rojo-tomate); }
+.card-naranja h2 { color: var(--naranja-zanahoria); }
+.card-morado h2 { color: var(--morado-berenjena); }
+
+/* Badges & Color Markers */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 6px;
+}
+.badge-verde { background-color: var(--verde-suave); color: var(--verde-hoja); }
+.badge-rojo { background-color: var(--rojo-suave); color: var(--rojo-tomate); }
+.badge-naranja { background-color: var(--naranja-suave); color: var(--naranja-zanahoria); }
+.badge-morado { background-color: var(--morado-suave); color: var(--morado-berenjena); }
+
+/* Bible Links */
+.bible-link {
+  color: var(--morado-berenjena);
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--morado-suave);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid #e1bee7;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bible-link:hover {
+  background-color: var(--morado-berenjena);
+  color: var(--blanco);
+}
+
+/* Authentication Screen */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e8f5e9 0%, #fff3e0 50%, #f3e5f5 100%);
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--blanco);
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-top: 8px solid var(--verde-hoja);
+  text-align: center;
+}
+
+.login-box h2 {
+  justify-content: center;
+  color: var(--verde-hoja);
+  margin-bottom: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--texto-principal);
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--borde-suave);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--verde-hoja);
+}
+
+.btn-login {
+  width: 100%;
+  background-color: var(--verde-hoja);
+  color: var(--blanco);
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #1b5e20;
+}
+
+.btn-logout {
+  background-color: var(--rojo-tomate);
+  color: var(--blanco);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: auto;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #b71c1c;
+}
+
+.error-msg {
+  color: var(--rojo-tomate);
+  background-color: var(--rojo-suave);
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: none;
+}
+
+/* Grid layout for features */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--borde-suave);
+  margin-top: 40px;
+  background-color: var(--blanco);
+}
